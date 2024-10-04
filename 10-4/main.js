@@ -9,4 +9,12 @@ function errorInput(){
     }
     console.log("Month",month,"Day:",day)
 
-}
+}const  monthSelect =getElementById("monthname")
+monthSelectList();
+function monthSerectList(){
+    for (let i=1;i<12;i++)
+        let option = document.createElement('option')
+        option.value = i;
+        option.textContent = i +"月";
+        monthSelect.appendChild(option);
+    }
