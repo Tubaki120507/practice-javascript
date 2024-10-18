@@ -1,12 +1,11 @@
-//クリックしたら動作する
+function ClickCounterGame(){
+const gameContainer = document.getElementById("game-container");
+let button = document.createElement("button");
+button.textContent = "クリック";
+gameContainer.appendChild(button);
 
-function errorInput(){
-   const month = document.getElementById("month").value;
-   const day =  document.getElementById("day").value;
-   if(month<1 || month>12){
-        alert("適切な値ではありません");
-        return
-    }
-    console.log("Month",month,"Day:",day)
 
 }
+
+
+ClickCounterGame();
