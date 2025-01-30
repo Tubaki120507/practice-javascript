@@ -1,5 +1,5 @@
 
-function ClickCounterGame(){
+/*function ClickCounterGame(){
     let count = 0;
     gameContainer = document.getElementById("game-container")
 
@@ -38,7 +38,7 @@ gameContainer.appendChild(button3);
 gameContainer.appendChild(counter);
 }
 
-ClickCounterGame();
+ClickCounterGame();*/
 
 function startNumberGuessGame(){
     gameContainer = document.getElementById("game-container");
@@ -50,6 +50,18 @@ function startNumberGuessGame(){
     input.placeholder = "好きな数字を入力してください(1~100)";
     gameContainer.appendChild(message);
     gameContainer.appendChild(input);
+
+    let button = document.createElement("button");
+    button .textContent = "確認"
+
+    button.addEventListener("click",function(){
+        if (randomNumber == parseInt(input.value)){
+            message.textContent = "正解"
+        }else{
+            message.textContent = "違うよ"
+        }
+    })
+    gameContainer.appendChild(button);
 
 }
 
